@@ -1,0 +1,39 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+label{
+    font-weight: bold;
+}
+input{
+    display: block;
+    margin: 10px 0;
+}
+table{
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+td{
+    margin: 15px 30px;
+    padding: 7px 20px;
+}
+tbody td:nth-child(odd){
+    background: rgb(209, 209, 209);
+}
+table .thead{
+    background: rgb(230,230,230);
+    border-bottom: 2px solid black;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

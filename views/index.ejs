@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formula One Champions</title>
+</head>
+<body>
+    <h1>Formula One Champions</h1>
+
+    <form action="/getChamp" method="POST">
+        <label for="champ">Get Champion Information: </label>
+        <input type="text" name="champ" placeholder="Enter Driver Name">
+        <span> OR </span>
+        <input type="number" name="year" min="1950" max="2020" step="1" placeholder="Enter Year">
+        <span> OR </span> 
+        <input type="text" name="nationality" placeholder="Enter Nationality">
+        <button type="submit">Go!</button>        
+    </form>
+
+    <table>
+        <thead>
+            <tr class="thead">
+                <td>Driver</td>
+                <td>Nationality</td>
+                <td>Year(s) Won</td>
+            </tr>
+        </thead>
+        <tbody>
+        <% for (let i=0; i < drivers.length; i++) { %>
+            <tr>
+                <td><%= drivers[i].name %></td>
+                <td><%= drivers[i].nationality %></td>
+                <td><%= drivers[i].yearsWon.join(', ') %></td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+
+</body>
+</html>
